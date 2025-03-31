@@ -1,0 +1,54 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #9c66c8;
+    color: white;
+    box-shadow:0.1rem 0.1rem 0.1rem black ;
+    z-index: 5;
+    
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    left: 40%;
+    top: -3%;
+  }
+  .sub{
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    left: 35%;
+    top:3%;
+    animation: slideInFromRight 3s ease-out forwards;
+  }
+  @keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+  .login-button {
+    background-color: white;
+    color: #ff6b6b;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    position: absolute;
+    left: 90%;
+    top:2%
+  }
+  
+  .login-button:hover {
+    background-color: #ff3b3b;
+    color: white;
+  }
+  

@@ -1,0 +1,68 @@
+.admin-dashboard {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .menu-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .menu-form input,
+  .menu-form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .menu-form button {
+    background: #ff6b6b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-list {
+    margin-top: 20px;
+  }
+  
+  .menu-date {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .menu-category {
+    margin-top: 10px;
+  }
+  
+  .menu-category ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-category li {
+    background: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-category button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
