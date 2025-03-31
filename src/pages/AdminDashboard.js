@@ -13,7 +13,7 @@ function AdminDashboard() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/menu")
+    fetch("https://cloud-kitchen-raix.onrender.com/api/menu")
       .then((res) => res.json())
       .then((data) => setMenu(data));
   }, []);
@@ -24,7 +24,7 @@ function AdminDashboard() {
   const addMenuItem = () => {
     if (!selectedDate) return alert("Please select a date!");
 
-    fetch("http://localhost:5000/api/menu", {
+    fetch("https://cloud-kitchen-raix.onrender.com/api/menu", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -40,7 +40,7 @@ function AdminDashboard() {
   };
 
   const deleteMenuItem = (date, type, index) => {
-    fetch("http://localhost:5000/api/menu", {
+    fetch("https://cloud-kitchen-raix.onrender.com/api/menu", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ date, type, index })
