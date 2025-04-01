@@ -59,6 +59,8 @@ li {
   align-items: center;
   transition: 0.3s ease-in-out;
   border: 1px solid #ddd;
+  flex-wrap: wrap; /* Allow flex items to wrap */
+  max-width: 100%; /* Ensure items don't overflow the container */
 }
 
 li strong {
@@ -76,6 +78,21 @@ li:hover {
   margin-right: 10px;
 }
 
+.items {
+  font-weight: bold;
+}
+
+.item {
+  position: relative;
+  right: 10%;
+  font-size: 120%;
+  word-wrap: break-word; /* Ensures long text wraps within the available space */
+}
+
+.name {
+  font-size: 140%;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .menu {
@@ -90,6 +107,8 @@ li:hover {
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;
+    font-size: 14px;
+    word-wrap: break-word; /* Ensure text wraps */
   }
 
   .meal-icon {
@@ -97,7 +116,6 @@ li:hover {
   }
 
   .item {
-    position: static;
     font-size: 110%;
     text-align: left;
   }
@@ -127,6 +145,7 @@ li:hover {
   li {
     padding: 12px;
     font-size: 14px;
+    word-wrap: break-word; /* Wrap text */
   }
 
   .meal-icon {
@@ -140,19 +159,4 @@ li:hover {
   .item {
     font-size: 100%;
   }
-}
-
-/* Additional Styling */
-.items {
-  font-weight: bold;
-}
-
-.item {
-  position: relative;
-  right: 10%;
-  font-size: 120%;
-}
-
-.name {
-  font-size: 140%;
 }
