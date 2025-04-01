@@ -14,7 +14,6 @@ body {
 
 .main-content {
   width: 100%;
-  max-width: 720px; /* Reduced max-width for even smaller side space on large screens */
   padding: 20px; /* Adds padding around the content */
   box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
