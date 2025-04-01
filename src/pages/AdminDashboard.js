@@ -9,17 +9,23 @@ function AdminDashboard() {
     name: "",
     quantity: "",
     serves: "",
-    price: ""
+    price: "",
   });
 
-  useEffect(() => {
+  const fetchMenuData = () => {
     fetch("https://cloud-kitchen-raix.onrender.com/api/menu")
       .then((res) => res.json())
-      .then((data) => setMenu(data));
+      .then((data) => setMenu(data))
+      .catch((err) => console.error("Error fetching menu:", err));
+  };
+
+  useEffect(() => {
+    fetchMenuData();
   }, []);
 
   const handleDateChange = (e) => setSelectedDate(e.target.value);
-  const handleInputChange = (e) => setNewItem({ ...newItem, [e.target.name]: e.target.value });
+  const handleInputChange = (e) =>
+    setNewItem({ ...newItem, [e.target.name]: e.target.value });
 
   const addMenuItem = () => {
     if (!selectedDate) return alert("Please select a date!");
@@ -30,11 +36,12 @@ function AdminDashboard() {
       body: JSON.stringify({
         date: selectedDate,
         type: newItem.type,
-        item: newItem
-      })
+        item: newItem,
+      }),
     })
       .then((res) => res.json())
-      .then((data) => setMenu(data.menu));
+      .then(() => fetchMenuData())
+      .catch((err) => console.error("Error adding item:", err));
 
     setNewItem({ type: "Breakfast", name: "", quantity: "", serves: "", price: "" });
   };
@@ -43,10 +50,11 @@ function AdminDashboard() {
     fetch("https://cloud-kitchen-raix.onrender.com/api/menu", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ date, type, index })
+      body: JSON.stringify({ date, type, index }),
     })
       .then((res) => res.json())
-      .then((data) => setMenu(data.menu));
+      .then(() => fetchMenuData())
+      .catch((error) => console.error("Error deleting item:", error));
   };
 
   return (
@@ -84,19 +92,23 @@ function AdminDashboard() {
         {Object.keys(menu).length === 0 ? (
           <p>No menu available.</p>
         ) : (
-          Object.keys(menu).map((date) => (
+          Object.entries(menu).map(([date, meals]) => (
             <div key={date} className="menu-date">
               <h4>{date}</h4>
-              {Object.keys(menu[date]).map((type) => (
+              {Object.entries(meals).map(([type, items]) => (
                 <div key={type} className="menu-category">
                   <h5>{type}</h5>
                   <ul>
-                    {menu[date][type].map((item, index) => (
-                      <li key={index}>
-                        {item.name} - {item.quantity} - {item.serves} - {item.price}
-                        <button onClick={() => deleteMenuItem(date, type, index)}>Delete</button>
-                      </li>
-                    ))}
+                    {Array.isArray(items) && items.length > 0 ? (
+                      items.map((item, index) => (
+                        <li key={index}>
+                          {item.name} - {item.quantity} - {item.serves} - {item.price}
+                          <button onClick={() => deleteMenuItem(date, type, index)}>Delete</button>
+                        </li>
+                      ))
+                    ) : (
+                      <p>No items available for {type}</p>
+                    )}
                   </ul>
                 </div>
               ))}
