@@ -13,7 +13,7 @@ function AdminDashboard() {
   });
 
   const fetchMenuData = () => {
-    fetch("https://cloud-kitchen-raix.onrender.com/api/menu")
+    fetch("https://cloud-kitchen-backend-w3od.onrender.com/api/menu")
       .then((res) => res.json())
       .then((data) => setMenu(data))
       .catch((err) => console.error("Error fetching menu:", err));
@@ -30,7 +30,7 @@ function AdminDashboard() {
   const addMenuItem = () => {
     if (!selectedDate) return alert("Please select a date!");
 
-    fetch("https://cloud-kitchen-raix.onrender.com/api/menu", {
+    fetch("https://cloud-kitchen-backend-w3od.onrender.com/api/menu", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -47,7 +47,7 @@ function AdminDashboard() {
   };
 
   const deleteMenuItem = (date, type, index) => {
-    fetch("https://cloud-kitchen-raix.onrender.com/api/menu", {
+    fetch("https://cloud-kitchen-backend-w3od.onrender.com/api/menu", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ date, type, index }),
