@@ -1,5 +1,19 @@
 .about {
-    padding: 20px;
-    text-align: center;
+  padding: 40px 20px; /* Add more space for larger screens */
+  text-align: center;
+  font-size: 16px; /* Base font size */
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 30px 15px; /* Less padding on smaller devices */
+    font-size: 14px; /* Slightly smaller font size */
   }
-  
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    padding: 20px 10px; /* Reduce padding further on very small screens */
+    font-size: 12px; /* Even smaller font for mobile screens */
+  }
+}
