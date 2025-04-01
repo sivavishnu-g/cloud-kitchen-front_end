@@ -1,147 +1,142 @@
 /* General Styles */
 body {
-    font-family: "Poppins", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f8f9fa;
-    color: #333;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
 }
 
-/* Box Sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
+/* Landing Page Container */
+.landing-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Universal Container */
-.container {
-    width: min(90%, 1200px);
-    margin: auto;
-}
-
-/* Navbar Styling */
+/* --- Navbar Fix --- */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #ff6b6b;
-    padding: 1rem 2rem;
-    color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff6b6b;
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Navbar Links */
 .navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+  color: #fff3e3;
 }
 
-/* Hero Section */
-.hero-section {
-    text-align: center;
-    background: url("../assets/hero-bg.jpg") no-repeat center/cover;
-    color: white;
-    padding: 5rem 2rem;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* --- Fix for Login Button --- */
+.navbar .login-btn {
+  background: white;
+  color: #ff6b6b;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.hero-section h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+.navbar .login-btn:hover {
+  background: #ffeadb;
+  color: #ff6b6b;
 }
 
-.hero-section p {
-    font-size: 1.2rem;
-    max-width: 600px;
+/* --- Hero Section Fix --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background: url("../assets/hero-bg.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Button Styles */
-button, .button {
-    background: #ff6b6b;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-button:hover, .button:hover {
-    background: #e05757;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  max-width: 600px;
 }
 
-/* Menu Section */
-.menu {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: white;
+.hero .cta-btn {
+  background: #ff6b6b;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.menu h2 {
-    color: #444;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.hero .cta-btn:hover {
+  background: white;
+  color: #ff6b6b;
 }
 
-.menu-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.menu-item {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* About Section */
-.about {
-    background: #f1f1f1;
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.about h2 {
-    color: #333;
+/* --- Section Styling --- */
+.section {
+  width: 85%;
+  margin: 50px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
 .footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 14px;
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
 
-/* Responsive Grid System */
-@media (max-width: 600px) {
-    .menu-items {
-        grid-template-columns: 1fr;
-    }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .cta-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
 }
