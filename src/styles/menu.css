@@ -76,9 +76,14 @@ li:hover {
   margin-right: 10px;
 }
 
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .menu {
     width: 95%;
+  }
+
+  .meal-section {
+    padding: 15px;
   }
 
   li {
@@ -90,17 +95,64 @@ li:hover {
   .meal-icon {
     font-size: 20px;
   }
+
+  .item {
+    position: static;
+    font-size: 110%;
+    text-align: left;
+  }
+
+  .name {
+    font-size: 130%;
+  }
 }
 
-.items{
+@media screen and (max-width: 480px) {
+  .menu {
+    width: 98%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  li {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .meal-icon {
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 120%;
+  }
+
+  .item {
+    font-size: 100%;
+  }
+}
+
+/* Additional Styling */
+.items {
   font-weight: bold;
+}
 
+.item {
+  position: relative;
+  right: 10%;
+  font-size: 120%;
 }
-.item{
-position: relative;
-right: 10%;
-font-size: 120%;
-}
-.name{
-  font-size:140% ;
+
+.name {
+  font-size: 140%;
 }
