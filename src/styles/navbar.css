@@ -46,7 +46,7 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
-  margin-left: auto; /* Pushes the button to the right properly */
+  margin-left: 70px; /* Pushes the button to the right properly */
 }
 
 .login-button:hover {
