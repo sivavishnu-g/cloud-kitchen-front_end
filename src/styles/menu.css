@@ -1,83 +1,102 @@
+/* General Styles */
 .menu {
-  width: 80%;
-  margin: 20px auto;
+  width: 85%;
+  margin: 30px auto;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
 }
 
+/* Section Headings */
 h2 {
-  color: #333;
-  font-size: 26px;
-  margin-bottom: 15px;
+  color: #ff6b6b;
+  font-size: 28px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  border-bottom: 3px solid #ff6b6b;
+  border-bottom: 4px solid #ff6b6b;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
 }
 
+/* Meal Section */
 .meal-section {
-  background: #fff;
+  background: white;
   margin: 20px 0;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .meal-section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Sub Headings */
 h3 {
-  color: #18181a;
-  font-size: 22px;
-  border-left: 5px solid #ff6b6b;
+  color: #333;
+  font-size: 24px;
+  border-left: 6px solid #ff6b6b;
   padding-left: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 h4 {
-  color: #18181a;
-  font-size: 18px;
+  color: #444;
+  font-size: 20px;
   margin: 10px 0;
 }
 
+/* List Styling */
 ul {
   list-style: none;
   padding: 0;
 }
 
+/* List Items */
 li {
-  background: #f8f9fa;
-  margin: 8px 0;
+  background: #fff5f3;
+  margin: 10px 0;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   transition: 0.3s ease-in-out;
-  border: 1px solid #ddd;
-}
-
-li strong {
-  color: #2c3e50;
-  font-size: 16px;
+  border: 1px solid #ff6b6b;
 }
 
 li:hover {
-  background: #ffeadb;
+  background: #ffdad6;
+}
+
+/* Text Styling */
+li strong {
+  color: #2c3e50;
+  font-size: 18px;
 }
 
 .meal-icon {
   font-size: 22px;
   color: #ff6b6b;
-  margin-right: 10px;
+  margin-right: 12px;
 }
-.items{
-  color:black;
+
+/* Quantity & Price Info */
+.item {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
 }
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .menu {
     width: 95%;
@@ -92,21 +111,13 @@ li:hover {
   .meal-icon {
     font-size: 20px;
   }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .item {
+    font-size: 14px;
+  }
 }
 
-.items{
-  font-weight: bold;
-
-}
-.item{
-position: relative;
-right: 10%;
-font-size: 120%;
-}
-.name{
-  font-size:140% ;
-} 
-
-p{
-  color:black;
-}
