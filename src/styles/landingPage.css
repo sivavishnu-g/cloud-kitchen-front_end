@@ -18,27 +18,3 @@ body {
   padding: 20px; /* Adds padding around the content */
   box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
-
-/* Responsive Design for tablets and smaller screens */
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 15px; /* Slightly smaller font for smaller screens */
-  }
-
-  .main-content {
-    padding: 15px; /* Reduce padding for smaller screens */
-    max-width: 80%; /* Make content take up 80% of screen width */
-  }
-}
-
-/* Responsive Design for mobile screens */
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 14px; /* Further reduce font size for very small screens */
-  }
-
-  .main-content {
-    padding: 10px; /* Reduce padding further for very small screens */
-    max-width: 95%; /* Make content take up 95% of screen width */
-  }
-}
