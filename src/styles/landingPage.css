@@ -14,8 +14,9 @@ body {
 
 .main-content {
   width: 100%;
-  max-width: 1200px; /* You can adjust this as per your design */
+  max-width: 960px; /* Reduced max-width for less side space */
   padding: 20px; /* Adds padding around the content */
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
 /* Responsive Design */
@@ -26,6 +27,7 @@ body {
 
   .main-content {
     padding: 15px; /* Reduce padding for smaller screens */
+    max-width: 90%; /* Take up 90% of the screen width for better fit */
   }
 }
 
@@ -36,5 +38,6 @@ body {
 
   .main-content {
     padding: 10px; /* Reduce padding further for very small screens */
+    max-width: 95%; /* Take up more space on smaller screens */
   }
 }
