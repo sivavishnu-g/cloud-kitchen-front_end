@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 10px 20px; /* Reduced padding to minimize navbar size */
   background-color: #9c66c8;
   color: white;
   box-shadow: 0.1rem 0.1rem 0.1rem black;
@@ -16,13 +16,13 @@
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 24px; /* Slightly smaller font size */
   font-weight: bold;
   display: block;
 }
 
 .sub {
-  font-size: 15px;
+  font-size: 14px; /* Slightly smaller font size */
   font-weight: bold;
   display: block;
   animation: slideInFromRight 1.5s ease-out forwards;
@@ -48,6 +48,10 @@
   font-weight: bold;
   transition: 0.3s ease;
   border-radius: 5px;
+  position: absolute;
+  right: 20px; /* Position the button to the top right */
+  top: 50%; /* Vertically center the button */
+  transform: translateY(-50%);
 }
 
 .login-button:hover {
@@ -60,7 +64,7 @@
   .navbar {
     flex-direction: column;
     text-align: center;
-    padding: 10px;
+    padding: 10px 15px; /* Adjust padding */
   }
 
   .logo-container {
@@ -68,11 +72,11 @@
   }
 
   .logo {
-    font-size: 24px;
+    font-size: 22px; /* Slightly smaller logo font size */
   }
 
   .sub {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .login-button {
@@ -83,11 +87,11 @@
 
 @media screen and (max-width: 480px) {
   .logo {
-    font-size: 22px;
+    font-size: 20px; /* Smaller font for very small screens */
   }
 
   .sub {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .login-button {
