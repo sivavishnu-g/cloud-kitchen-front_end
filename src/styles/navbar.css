@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px; /* Padding to give enough space */
+  padding: 20px 40px; /* Increase padding to make space for the button */
   background-color: #6a4caf; /* Improved dark purple shade */
   color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -12,7 +12,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  height: 80px; /* Navbar height */
+  right:20px;
 }
 
 /* Left Section */
@@ -50,7 +50,7 @@
   
   position: absolute; /* Positioning it to the top right */
   top: 15px; /* Adjusted to give space from top */
-  right: 10px; /* Adjusted to fit the button within the screen */
+  right: 20px;
 }
 
 .login-button:hover {
