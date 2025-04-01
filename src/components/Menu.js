@@ -6,13 +6,11 @@ function Menu() {
   const [today, setToday] = useState("");
 
   useEffect(() => {
-    // Fetch menu data from the backend
     fetch("https://cloud-kitchen-raix.onrender.com/api/menu")
       .then((res) => res.json())
       .then((data) => setMenu(data))
       .catch((err) => console.error("Error fetching menu:", err));
 
-    // Get today's date (YYYY-MM-DD)
     const currentDate = new Date().toISOString().split("T")[0];
     setToday(currentDate);
   }, []);
@@ -27,14 +25,13 @@ function Menu() {
     return upcomingDates;
   };
 
-  // Function to get meal icon based on type
   const getMealIcon = (mealType) => {
     const icons = {
       Breakfast: "🍽️",
       Lunch: "🍛",
       Dinner: "🍲",
     };
-    return icons[mealType] || "🥗"; // Default icon if not found
+    return icons[mealType] || "🥗";
   };
 
   return (
@@ -47,12 +44,15 @@ function Menu() {
               <span className="meal-icon">{getMealIcon(mealType)}</span> {mealType}
             </h3>
             <ul>
-              {menu[today][mealType].length === 0 ? (
+              {menu[today][mealType] && menu[today][mealType].length === 0 ? (
                 <p>No items available</p>
               ) : (
-                menu[today][mealType].map((item, index) => (
+                menu[today][mealType]?.map((item, index) => (
                   <li key={index} className="items">
-                    <strong className="name">{item.name}</strong> <span className="item"> Quantity - {item.quantity} Total Serves - {item.serves} Price - {item.price} </span>
+                    <strong className="name">{item.name}</strong>{" "}
+                    <span className="item">
+                      Quantity - {item.quantity} | Serves - {item.serves} | Price - {item.price}
+                    </span>
                   </li>
                 ))
               )}
@@ -74,15 +74,18 @@ function Menu() {
                   <span className="meal-icon">{getMealIcon(mealType)}</span> {mealType}
                 </h4>
                 <ul>
-                {menu[today][mealType].length === 0 ? (
-                <p>No items available</p>
-              ) : (
-                menu[today][mealType].map((item, index) => (
-                  <li key={index} className="items">
-                    <strong className="name">{item.name}</strong> <span className="item"> Quantity - {item.quantity} Total Serves - {item.serves} Price - {item.price} </span>
-                  </li>
-                ))
-              )}
+                  {menu[date][mealType] && menu[date][mealType].length === 0 ? (
+                    <p>No items available</p>
+                  ) : (
+                    menu[date][mealType]?.map((item, index) => (
+                      <li key={index} className="items">
+                        <strong className="name">{item.name}</strong>{" "}
+                        <span className="item">
+                          Quantity - {item.quantity} | Serves - {item.serves} | Price - {item.price}
+                        </span>
+                      </li>
+                    ))
+                  )}
                 </ul>
               </div>
             ))
