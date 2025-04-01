@@ -6,6 +6,16 @@ body {
   background-color: #f9f9f9; /* Light grey background for a clean look */
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: flex-start; /* Align content at the top */
+  height: 100vh; /* Ensure the content takes full viewport height */
+}
+
+.main-content {
+  width: 100%;
+  max-width: 1200px; /* You can adjust this as per your design */
+  padding: 20px; /* Adds padding around the content */
 }
 
 /* Responsive Design */
@@ -13,10 +23,18 @@ body {
   body {
     font-size: 15px; /* Slightly smaller font for smaller screens */
   }
+
+  .main-content {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
 }
 
 @media screen and (max-width: 480px) {
   body {
     font-size: 14px; /* Further reduce font size for very small screens */
+  }
+
+  .main-content {
+    padding: 10px; /* Reduce padding further for very small screens */
   }
 }
