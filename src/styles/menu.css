@@ -75,7 +75,9 @@ li:hover {
   color: #ff6b6b;
   margin-right: 10px;
 }
-
+.items{
+  color:black;
+}
 @media screen and (max-width: 768px) {
   .menu {
     width: 95%;
