@@ -14,12 +14,12 @@ body {
 
 .main-content {
   width: 100%;
-  max-width: 800px; /* Reduced max-width to further minimize side space */
+  max-width: 720px; /* Reduced max-width for even smaller side space on large screens */
   padding: 20px; /* Adds padding around the content */
   box-sizing: border-box; /* Ensures padding is included in the width calculation */
 }
 
-/* Responsive Design */
+/* Responsive Design for tablets and smaller screens */
 @media screen and (max-width: 768px) {
   body {
     font-size: 15px; /* Slightly smaller font for smaller screens */
@@ -27,10 +27,11 @@ body {
 
   .main-content {
     padding: 15px; /* Reduce padding for smaller screens */
-    max-width: 85%; /* Take up 85% of the screen width for better fit */
+    max-width: 80%; /* Make content take up 80% of screen width */
   }
 }
 
+/* Responsive Design for mobile screens */
 @media screen and (max-width: 480px) {
   body {
     font-size: 14px; /* Further reduce font size for very small screens */
@@ -38,6 +39,6 @@ body {
 
   .main-content {
     padding: 10px; /* Reduce padding further for very small screens */
-    max-width: 90%; /* Take up 90% of the screen width */
+    max-width: 95%; /* Make content take up 95% of screen width */
   }
 }
