@@ -12,7 +12,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  height: 50px;  /* Reduced height */
+  height: 10px;  /* Reduced height */
 }
 
 /* Left Section */
@@ -51,7 +51,7 @@
   
   position: absolute; /* Positioning it to the top right */
   top: 10px;
-  right: 20px;
+  right: 30px; /* Adjusted to be less on the right side */
 }
 
 .login-button:hover {
