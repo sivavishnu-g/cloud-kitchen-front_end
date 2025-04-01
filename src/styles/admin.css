@@ -1,127 +1,68 @@
 .admin-dashboard {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.menu-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 450px;
-  margin: 0 auto;
-}
-
-.menu-form input,
-.menu-form select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.menu-form button {
-  background: #ff6b6b;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.menu-list {
-  margin-top: 30px;
-}
-
-.menu-date {
-  margin-top: 30px;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-.menu-category {
-  margin-top: 20px;
-}
-
-.menu-category ul {
-  list-style: none;
-  padding: 0;
-}
-
-.menu-category li {
-  background: #fff;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-category button {
-  background: red;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .admin-dashboard {
-    padding: 30px 15px;
+    padding: 20px;
+    text-align: center;
   }
-
+  
   .menu-form {
-    max-width: 100%;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
   }
-
+  
   .menu-form input,
-  .menu-form select,
-  .menu-form button {
-    font-size: 14px;
+  .menu-form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
-
-  .menu-list,
-  .menu-date,
-  .menu-category {
+  
+  .menu-form button {
+    background: #ff6b6b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-list {
     margin-top: 20px;
   }
-
+  
+  .menu-date {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .menu-category {
+    margin-top: 10px;
+  }
+  
+  .menu-category ul {
+    list-style: none;
+    padding: 0;
+  }
+  
   .menu-category li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-category button {
-    padding: 6px 10px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .admin-dashboard {
-    padding: 20px;
-  }
-
-  .menu-form {
-    gap: 12px;
-  }
-
-  .menu-form input,
-  .menu-form select,
-  .menu-form button {
-    font-size: 13px;
-    padding: 8px;
-  }
-
-  .menu-category li {
+    background: #fff;
     padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-
+  
   .menu-category button {
+    background: red;
+    color: white;
+    border: none;
     padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
   }
-}
+  
