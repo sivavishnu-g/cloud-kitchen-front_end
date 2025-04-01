@@ -101,7 +101,7 @@ function AdminDashboard() {
                   <ul>
                     {Array.isArray(items) && items.length > 0 ? (
                       items.map((item, index) => (
-                        <li key={index}>
+                        <li key={index} className="items">
                           {item.name} - {item.quantity} - {item.serves} - {item.price}
                           <button onClick={() => deleteMenuItem(date, type, index)}>Delete</button>
                         </li>
