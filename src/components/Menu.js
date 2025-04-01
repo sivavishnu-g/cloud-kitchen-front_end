@@ -7,7 +7,7 @@ function Menu() {
   const [today, setToday] = useState("");
 
   useEffect(() => {
-    fetch("https://cloud-kitchen-raix.onrender.com/api/menu")
+    fetch("https://cloud-kitchen-backend-w3od.onrender.com/api/menu")
       .then((res) => res.json())
       .then((data) => setMenu(data))
       .catch((err) => console.error("Error fetching menu:", err));
