@@ -1,4 +1,135 @@
+/* Essential viewport meta tag for HTML head: */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+
+/* Base Styles (Mobile First Approach) */
 body {
     font-family: Arial, sans-serif;
-  }
-  
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: clamp(14px, 2vw, 18px); /* Fluid typography */
+}
+
+/* Universal Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Responsive Container */
+.container {
+    width: min(100% - 2rem, 1400px); /* Fluid width with max limit */
+    margin-inline: auto; /* Logical property for RTL/LTR support */
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media Query Breakpoints */
+/* Mobile (default styles already applied) */
+
+/* Tablet (768px and up) */
+@media screen and (min-width: 48em) { /* 768px */
+    body {
+        line-height: 1.7;
+    }
+    
+    .container {
+        width: min(100% - 3rem, 1400px);
+    }
+}
+
+/* Laptop/Desktop (1024px and up) */
+@media screen and (min-width: 64em) { /* 1024px */
+    body {
+        font-size: clamp(16px, 1.2vw, 20px);
+    }
+}
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 90em) { /* 1440px */
+    .container {
+        width: min(100% - 4rem, 1600px);
+    }
+}
+
+/* Ultra-wide Screens (1920px and up) */
+@media screen and (min-width: 120em) { /* 1920px */
+    body {
+        font-size: 1.1vw;
+    }
+}
+
+/* Orientation-specific adjustments */
+@media (orientation: portrait) {
+    /* Portrait-specific styles */
+}
+
+@media (orientation: landscape) {
+    /* Landscape-specific styles */
+}
+
+/* Responsive Grid System */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+
+/* Flexible Typography */
+h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Responsive Navigation Example */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+/* Touch-friendly Elements */
+button, .button {
+    min-width: 48px; /* Minimum touch target size */
+    min-height: 48px;
+    padding: 0.8em 1.5em;
+}
+
+/* Fluid Spacing */
+.section {
+    padding: clamp(2rem, 5vw, 4rem) 1rem;
+}
+
+/* Aspect Ratio Preservation */
+.video-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+/* Dark/Light Mode Support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #111;
+        color: #fff;
+    }
+}
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+    body {
+        -webkit-text-stroke: 0.5px;
+    }
+}
