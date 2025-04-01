@@ -26,7 +26,9 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
+  items{
+      color:black;
+  }
   .menu-list {
     margin-top: 20px;
   }
