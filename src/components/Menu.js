@@ -1,4 +1,4 @@
-//cloud-kitchen-raix.onrender.com/api/menuect } from "react";
+//cloud-kitchen-raix.onrender.com/api/menu
 import React, { useState, useEffect } from "react";
 import "../styles/menu.css";
 
@@ -7,7 +7,7 @@ function Menu() {
   const [today, setToday] = useState("");
 
   useEffect(() => {
-    fetch("cloud-kitchen-raix.onrender.com/api/menu")
+    fetch("http://localhost:5000/api/menu")
       .then((res) => res.json())
       .then((data) => setMenu(data))
       .catch((err) => console.error("Error fetching menu:", err));
