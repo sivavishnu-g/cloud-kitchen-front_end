@@ -1,7 +1,6 @@
 /* Navbar Styling */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
   background-color: #6a4caf; /* Improved dark purple shade */
@@ -25,7 +24,6 @@
 .logo {
   font-size: 26px;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
 /* Subtitle */
@@ -36,7 +34,7 @@
   animation: fadeIn 1.5s ease-in-out forwards;
 }
 
-/* Login Button */
+/* Login Button - Proper Positioning */
 .login-button {
   background-color: white;
   color: #6a4caf;
@@ -47,11 +45,8 @@
   border-radius: 8px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  
-  position: absolute; /* Ensure correct positioning */
-  right: 40px; /* Move it left */
-  top: 50%;
-  transform: translateY(-50%); /* Center vertically */
+
+  margin-left: auto; /* Pushes the button to the right properly */
 }
 
 .login-button:hover {
@@ -85,9 +80,8 @@
   }
 
   .login-button {
-    position: relative;
-    right: 0;
     margin-top: 10px;
-    transform: none;
+    width: 100%;
+    text-align: center;
   }
 }
