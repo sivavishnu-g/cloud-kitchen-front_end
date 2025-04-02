@@ -50,7 +50,7 @@
   
   position: absolute; /* Positioning it to the top right */
   top: 15px; /* Adjusted to give space from top */
-  right: 20px;
+  right: 10px;
 }
 
 .login-button:hover {
