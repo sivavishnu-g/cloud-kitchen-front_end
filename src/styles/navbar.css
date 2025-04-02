@@ -46,8 +46,8 @@
     font-weight: bold;
     transition: 0.3s ease;
     position: absolute;
-    left: 83%;
-    top:25%
+    left: 85%;
+    top:30%
   }
 
 .login-button:hover {
